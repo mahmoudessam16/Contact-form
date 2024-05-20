@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'Karla', sans-serif;
+    src:    url('../assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('ttf'),
+            url('../assets/fonts/Karla-VariableFont_wght.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Colors
+$LightGreen: hsl(148, 38%, 91%);
+$Green: hsl(169, 82%, 27%);
+$Red: hsl(0, 66%, 56%);
+$White: hsl(0, 0%, 100%);
+$MediumGrey: hsl(186, 15%, 59%);
+$DarkGrey: hsl(187, 24%, 22%);
+
+$size: 16px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type='email'], input[type='text'] {
+    padding: 14px;
+    border-radius: 5px;
+    border: 1px solid $MediumGrey;
+    outline: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+label {
+    color: $DarkGrey;
+    font-size: $size;
+}
+
+.star {
+    color: $Green;
+}
+
+.error {
+    color: $Red;
+    visibility: hidden;
+}
+
+body {
+    font-family: 'karla', sans-serif;
+    background-color: $LightGreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+        background-color: $White;
+        margin: 100px auto;
+        padding: 30px 40px;
+        border-radius: 25px;
+        width: 50%;
+        h1 {
+            color: $DarkGrey;
+            margin-bottom: 20px;
+        }
+        .name {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            div {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .email {
+            display: flex;
+            flex-direction: column;
+            margin: 25px 0;
+        }
+        .query {
+            .type {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                div {
+                    flex: 1;
+                    border: 1px solid $MediumGrey;
+                    height: 46px;
+                    border-radius: 5px;
+                    padding-left: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 600;
+                    margin: 15px 0;
+                    cursor: pointer;
+                    &:hover {
+                        border-color: $Green;
+                    }
+                    label {
+                        cursor: pointer;
+                        margin-left: 10px;
+                    }
+                    input {
+                        accent-color: $Green;
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            margin: 25px 0;
+            textarea {
+                border: 1px solid $MediumGrey;
+                outline: none;
+                width: 100%;
+                height: 160px;
+                resize: none;
+                margin: 15px 0;
+                font-size: 20px;
+                padding: 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover {
+                    border-color: $Green;
+                }
+            }
+        }
+        .consent {
+            div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                input {
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                    accent-color: $Green;
+                }
+                label {
+                    cursor: pointer;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        input[type='submit'] {
+            background-color: $Green;  
+            width: 100%;
+            padding: 20px; 
+            margin: 35px 0 0 0;
+            border: none;
+            outline: none;      
+            border-radius: 5px;  
+            color: $LightGreen;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+    }
+}
+
+input:hover {
+    border-color: $Green;
+}
+
+@media (max-width: 990px) {
+    body {
+        form {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 625px) {
+    body {
+        form {
+            width: 80%;
+            .name {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .query {
+                .type {
+                    flex-direction: column;
+                    align-items: stretch;
+                    div {
+                        flex: auto;
+                        margin: 2.5px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    body {
+        form {
+            width: 92%;
+            padding: 20px;
+            margin: 40px auto;
+            border-radius: 12px;
+            h1 {
+                font-size: 25px;
+            }
+            .name {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .query {
+                .type {
+                    flex-direction: column;
+                    align-items: stretch;
+                    div {
+                        flex: auto;
+                        margin: 2.5px 0;
+                    }
+                }
+            }
+            input[type='submit'] {
+                padding: 15px;
+            }
+            .consent {
+                label {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    input[type='text'], input[type='email'] {
+        padding: 11px;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./sass/style.css">
+  <title>Contact form</title>
+</head>
+<body>
+
+  <form>
+    <h1>Contact Us</h1>
+    <div class="name">
+      <div class="first">
+        <label for="first-name">First Name <span class="star">*</span></label>
+        <input type="text" id="first-name">
+        <span class="error">This field is required</span>
+      </div>
+      <div class="last">
+        <label for="last-name">Last Name <span class="star">*</span></label>
+        <input type="text" id="last-name">
+        <span class="error">This field is required</span>
+      </div>
+    </div>
+
+    <div class="email">
+      <label for="email">Email Address <span class="star">*</span></label>
+      <input type="email" id="email">
+      <span class="error">This field is required</span>
+    </div>
+
+    <div class="query">
+      <label for="query">Query Type <span class="star">*</span></label>
+      <div class="type">
+        <div class="general">
+          <input type="radio" name="type" id="general">
+          <label for="general">General Enquiry</label>
+        </div>
+        <div class="support">
+          <input type="radio" name="type" id="support">
+          <label for="support">Support Request</label>
+        </div>
+      </div>
+      <span class="error">Please Select a query type</span>
+    </div>
+
+    <div class="message">
+      <label for="message">Message <span class="star">*</span></label>
+      <textarea name="message" id="message"></textarea>
+      <span class="error">This field is required</span>
+    </div>
+
+    <div class="consent">
+      <div>
+        <input type="checkbox" id="consent">
+        <label for="consent">I consent to being contacted by the team <span class="star">*</span></label>
+      </div>
+      <span class="error">To submit this form, please consent to being contacted</span>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <!--
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+    -->
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Mahmoud Essam</a>.
+  </div> -->
+  <script src="main.js"></script>
+</body>
+</html>
